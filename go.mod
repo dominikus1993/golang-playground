@@ -2,4 +2,6 @@ module github.com/dominikus1993/golang-playground
 
 go 1.20
 
-require github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646 // indirect
+require github.com/disintegration/imaging v1.6.2
+
+require golang.org/x/image v0.6.0 // indirect

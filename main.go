@@ -6,7 +6,7 @@ import (
 	"image/png"
 	"os"
 
-	"github.com/nfnt/resize"
+	"github.com/disintegration/imaging"
 )
 
 func main() {
@@ -28,7 +28,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	newImage := resize.Resize(160, 0, image, resize.Lanczos3)
+	newImage := imaging.Resize(image, 338, 190, imaging.Lanczos)
 
 	// Encode uses a Writer, use a Buffer if you need the raw []byte
 	err = png.Encode(output, newImage)
